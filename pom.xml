@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>wo1261931870</groupId>
+	<artifactId>test-xxl-job</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>test-xxl-job</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<!--=============================================================================================-->
+		<!--下面两个配置基本地启动，后面的按需修改-->
+		<!--=============================================================================================-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!--spring网络WEB-->
+		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
+		<!--里面已经包含了springMVC的内容-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.2.0</version>
+			<!--<scope>test</scope>-->
+			<!--上面的scope表示作用范围-->
+			<!--在没有说明的情况下，scope默认就是compile-->
+			<!--如果我把mysql这些数据库驱动jar包设置为runtime-->
+			<!--那么我在日常使用的过程中，是无法访问这些类的-->
+		</dependency>
+		<!--=============================================================================================-->
+		<!--DEVELOPER_TOOLS-->
+		<!--=============================================================================================-->
+		<!--Lombok开发者工具-->
+		<!--帮助减少模板代码的Java注释库。-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+			<optional>true</optional>
+			<scope>provided</scope>
+			<!--因为只是源代码中提供了对应的功能-->
+			<!--所以其实不需要参与源代码的打包-->
+		</dependency>
+		<!--XXL-JOB是一个分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。现已开放源代码并接入多家公司线上产品线，开箱即用。-->
+		<dependency>
+			<groupId>com.xuxueli</groupId>
+			<artifactId>xxl-job-core</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
